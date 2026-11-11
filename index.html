@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH City Explorer</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>PH City Explorer</h1>
+
+        <p>Discover and explore cities and destinations across the Philippines.</p>
+
+        <!-- Search Input -->
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Try Manila">
+
+            <button id="searchButton">Search</button>
+        </div>
+
+        <!-- Message Display -->
+        <div id="message">Where would you like to explore? Enter a city name above.</div>
+
+        <!-- Map -->
+        <div id="map"></div>
+
+    </div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

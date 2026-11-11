@@ -1,0 +1,63 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: #dcdfe4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: rgb(247, 244, 244);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #020c18;
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 30px;
+    min-width: 120px;
+    height: 45px;
+    background: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1D4ED8;
+}
+
+#map {
+    height: 450px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+#message {
+    margin: 12px 0;
+    font-weight: bold;
+    color: #333;
+}
