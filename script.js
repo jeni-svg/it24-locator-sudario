@@ -1,19 +1,17 @@
 
-// Initialize map centered on the Philippines
 const map = L.map('map').setView([12.8797, 121.7740], 6);
 
-// Add OpenStreetMap tiles
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Store map markers
+
 let markers = [];
 
-// Track the latest search
+
 let searchNumber = 0;
 
-// Function to remove all markers
 function clearMarkers() {
 
     markers.forEach(marker => {
@@ -23,45 +21,43 @@ function clearMarkers() {
     markers = [];
 }
 
-// Automatically remove markers when user types
+
 document.getElementById("cityInput")
     .addEventListener("input", function() {
 
-        // Invalidate previous searches
+
         searchNumber++;
 
-        // Remove previous markers
         clearMarkers();
 
-        // Update message
+       
         document.getElementById("message").textContent =
             "Enter a new place and click Search.";
 
     });
 
-// Search Philippine cities
+
 async function searchCity() {
 
     const city = document.getElementById("cityInput").value.trim();
     const message = document.getElementById("message");
 
-    // Check empty input
     if (city === "") {
         message.textContent = "Please enter a city name.";
         return;
     }
 
-    // Identify current search
+
     const currentSearch = ++searchNumber;
 
-    // Remove old markers before searching
+    
     clearMarkers();
 
     message.textContent = "Searching for locations...";
 
     try {
 
-        // Search using Nominatim API
+        
         const url =
             `https://nominatim.openstreetmap.org/search?format=jsonv2&q=${encodeURIComponent(city + ", Philippines")}&countrycodes=ph&limit=5&addressdetails=1&dedupe=0`;
 
